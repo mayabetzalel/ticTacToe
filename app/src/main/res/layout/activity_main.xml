@@ -8,29 +8,15 @@
     android:background="@color/white"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
-        android:text=""
-        android:textSize="45sp"
-        android:textStyle="bold"
-        app:fontFamily="cursive"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!--image of the grid-->
     <ImageView
+        android:layout_marginTop="10dp"
         android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:contentDescription="Start"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/grid" />
+        app:srcCompat="@drawable/back" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -48,14 +34,13 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <!--images of the grid boxes-->
             <ImageView
                 android:id="@+id/imageView0"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="playerTap"
-                android:padding="20sp"
+                android:padding="0sp"
                 android:tag="0" />
 
             <ImageView
@@ -64,7 +49,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="playerTap"
-                android:padding="20sp"
+                android:padding="0sp"
                 android:tag="1" />
 
             <ImageView
@@ -73,7 +58,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="playerTap"
-                android:padding="20sp"
+                android:padding="0sp"
                 android:tag="2" />
         </LinearLayout>
 
@@ -89,7 +74,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="playerTap"
-                android:padding="20sp"
+                android:padding="0sp"
                 android:tag="3" />
 
             <ImageView
@@ -98,7 +83,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="playerTap"
-                android:padding="20sp"
+                android:padding="0sp"
                 android:tag="4" />
 
             <ImageView
@@ -107,7 +92,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="playerTap"
-                android:padding="20sp"
+                android:padding="0sp"
                 android:tag="5" />
         </LinearLayout>
 
@@ -123,7 +108,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="playerTap"
-                android:padding="20sp"
+                android:padding="7sp"
                 android:tag="6" />
 
             <ImageView
@@ -132,7 +117,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="playerTap"
-                android:padding="20sp"
+                android:padding="7sp"
                 android:tag="7" />
 
             <ImageView
@@ -141,13 +126,12 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="playerTap"
-                android:padding="20sp"
+                android:padding="7sp"
                 android:tag="8" />
         </LinearLayout>
 
     </LinearLayout>
 
-    <!--game status text display-->
 
     <ImageView
         android:id="@+id/imageCurrentSituation"
@@ -156,8 +140,23 @@
         android:layout_marginBottom="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/xplay"/>
 
-
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/resetGame"
+        android:layout_width="420dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="250sp"
+        android:layout_marginTop="150sp"
+        android:text="Reset Game"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="-213dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
